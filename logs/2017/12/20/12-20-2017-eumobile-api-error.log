@@ -1,0 +1,26 @@
+2017-12-20 10:07:33 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:07:33 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 10:09:26 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:09:26 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 10:11:19 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:11:19 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 10:12:52 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:12:52 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 10:13:27 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:13:27 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 10:13:59 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:13:59 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 10:16:41 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:16:41 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 10:25:45 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:25:45 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 10:25:47 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:25:47 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 10:26:09 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 | 1 | receive payments | ( data received: partnermobile=>237691876792, amount=>5000 , customermobile=>237699876016 , transactionid=>9342280, billno=>EUO20170610144450)
+2017-12-20 10:26:09 | C:\wamp\www\eumobile_api\receivePayment.php |  | 127.0.0.1 |  | receive payments | Row updated successfully
+2017-12-20 15:27:27 | C:\wamp\www\eumobile_api\ApiFunction\purchase.php |  | 127.0.0.1 | 1 | purchase | Welcome to Express Union Mobile. Dear Customer, You have transferred 1000 XAF to 237100004018, ID: 9342534.  your New Balance 4447459.50 XAF.You are mobile, we also.
+2017-12-20 15:40:07 | C:\wamp\www\eumobile_api\ApiFunction\purchase.php |  | 127.0.0.1 | 1 | purchase | Welcome to Express Union Mobile. Dear Customer, You have transferred 1000 XAF to 237100004018, ID: 9342535.  your New Balance 4446449.50 XAF.You are mobile, we also.
+2017-12-20 16:26:22 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set
+2017-12-20 16:28:33 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set
+2017-12-20 16:33:43 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set
+2017-12-20 16:41:57 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set

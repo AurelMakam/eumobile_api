@@ -1,0 +1,10 @@
+2017-08-30 16:00:47 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendMoney | Invalid Request
+2017-08-30 16:14:14 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | Welcome to Express Union Mobile. Dear Customer, You have transferred 500 XAF to 237677489970,  code is P7YF ID: 9314979, please inform the benef. your New Balance 82025.00 XAF.
+2017-08-30 16:30:01 | C:\wamp\www\eumobile_api\ApiFunction\payBill.php |  | 127.0.0.1 | 1 | payBill | Your transaction of BILLPAY 354120130 has successfully done for the Merchant ENEO  Amount 1000.0, trxn id: 9314980( params: biller=>ENEO, billno=>354120130)
+2017-08-30 16:37:40 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendPaymentRequest | Invalid Request
+2017-08-30 16:51:21 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendPaymentRequest | Invalid Request
+2017-08-30 16:54:18 | C:\wamp\www\eumobile_api\ApiFunction\sendPaymentRequest.php |  | 127.0.0.1 | 1 | sendPaymentRequest | demande de paiement effectuee au 237695283788 reference 
+2017-08-30 17:05:50 | C:\wamp\www\eumobile_api\ApiFunction\sendPaymentRequest.php |  | 127.0.0.1 | 1 | sendPaymentRequest | demande de paiement effectuee au 237695283788 reference 
+2017-08-30 17:15:26 | C:\wamp\www\eumobile_api\ApiFunction\sendPaymentRequest.php |  | 127.0.0.1 | 1 | sendPaymentRequest | demande de paiement effectuee au 237695283788 reference 
+2017-08-30 17:21:30 | C:\wamp\www\eumobile_api\ApiFunction\sendPaymentRequest.php |  | 127.0.0.1 | 1 | sendPaymentRequest | demande de paiement effectuee au 237695283788 reference 
+2017-08-30 17:26:37 | C:\wamp\www\eumobile_api\ApiFunction\sendPaymentRequest.php |  | 127.0.0.1 | 1 | sendPaymentRequest | demande de paiement effectuee au 237695283788 reference 

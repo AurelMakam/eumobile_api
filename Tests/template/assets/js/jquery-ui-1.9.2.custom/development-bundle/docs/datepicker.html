@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI datepicker documentation</title>
+
+	<style>
+	body {
+		font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif"
+	}
+	.gutter {
+		display: none;
+	}
+	</style>
+</head>
+<body>
+
+<script>{
+		"title":
+			"Datepicker Widget",
+		"excerpt":
+			"Select a date from a popup or inline calendar",
+		"termSlugs": {
+			"category": [
+				"widgets"
+			]
+		}
+	}</script><section class="quick-nav"><header><h2>QuickNav<a href="#entry-longdesc">Overview</a><a href="#entry-examples">Examples</a>
+</h2></header><div class="quick-nav-section">
+<h3>Options</h3>
+<div><a href="#option-altField">altField</a></div>
+<div><a href="#option-altFormat">altFormat</a></div>
+<div><a href="#option-appendText">appendText</a></div>
+<div><a href="#option-autoSize">autoSize</a></div>
+<div><a href="#option-buttonImage">buttonImage</a></div>
+<div><a href="#option-buttonImageOnly">buttonImageOnly</a></div>
+<div><a href="#option-buttonText">buttonText</a></div>
+<div><a href="#option-calculateWeek">calculateWeek</a></div>
+<div><a href="#option-changeMonth">changeMonth</a></div>
+<div><a href="#option-changeYear">changeYear</a></div>
+<div><a href="#option-closeText">closeText</a></div>
+<div><a href="#option-constrainInput">constrainInput</a></div>
+<div><a href="#option-currentText">currentText</a></div>
+<div><a href="#option-dateFormat">dateFormat</a></div>
+<div><a href="#option-dayNames">dayNames</a></div>
+<div><a href="#option-dayNamesMin">dayNamesMin</a></div>
+<div><a href="#option-dayNamesShort">dayNamesShort</a></div>
+<div><a href="#option-defaultDate">defaultDate</a></div>
+<div><a href="#option-duration">duration</a></div>
+<div><a href="#option-firstDay">firstDay</a></div>
+<div><a href="#option-gotoCurrent">gotoCurrent</a></div>
+<div><a href="#option-hideIfNoPrevNext">hideIfNoPrevNext</a></div>
+<div><a href="#option-isRTL">isRTL</a></div>
+<div><a href="#option-maxDate">maxDate</a></div>
+<div><a href="#option-minDate">minDate</a></div>
+<div><a href="#option-monthNames">monthNames</a></div>
+<div><a href="#option-monthNamesShort">monthNamesShort</a></div>
+<div><a href="#option-navigationAsDateFormat">navigationAsDateFormat</a></div>
+<div><a href="#option-nextText">nextText</a></div>
+<div><a href="#option-numberOfMonths">numberOfMonths</a></div>
+<div><a href="#option-prevText">prevText</a></div>
+<div><a href="#option-selectOtherMonths">selectOtherMonths</a></div>
+<div><a href="#option-shortYearCutoff">shortYearCutoff</a></div>
+<div><a href="#option-showAnim">showAnim</a></div>
+<div><a href="#option-showButtonPanel">showButtonPanel</a></div>
+<div><a href="#option-showCurrentAtPos">showCurrentAtPos</a></div>
+<div><a href="#option-showMonthAfterYear">showMonthAfterYear</a></div>
+<div><a href="#option-showOn">showOn</a></div>
+<div><a href="#option-showOptions">showOptions</a></div>
+<div><a href="#option-showOtherMonths">showOtherMonths</a></div>
+<div><a href="#option-showWeek">showWeek</a></div>
+<div><a href="#option-stepMonths">stepMonths</a></div>
+<div><a href="#option-weekHeader">weekHeader</a></div>
+<div><a href="#option-yearRange">yearRange</a></div>
+<div><a href="#option-yearSuffix">yearSuffix</a></div>
+<div><a href="#option-beforeShow">beforeShow</a></div>
+<div><a href="#option-beforeShowDay">beforeShowDay</a></div>
+<div><a href="#option-onChangeMonthYear">onChangeMonthYear</a></div>
+<div><a href="#option-onClose">onClose</a></div>
+<div><a href="#option-onSelect">onSelect</a></div>
+</div>
+<div class="quick-nav-section">
+<h3>Methods</h3>
+<div><a href="#method-destroy">destroy</a></div>
+<div><a href="#method-dialog">dialog</a></div>
+<div><a href="#method-isDisabled">isDisabled</a></div>
+<div><a href="#method-hide">hide</a></div>
+<div><a href="#method-show">show</a></div>
+<div><a href="#method-refresh">refresh</a></div>
+<div><a href="#method-getDate">getDate</a></div>
+<div><a href="#method-setDate">setDate</a></div>
+<div><a href="#method-option">option</a></div>
+<div><a href="#method-widget">widget</a></div>
+</div>
+<div class="quick-nav-section"><h3>Events</h3></div></section><article id="datepicker1" class="entry widget"><h2 class="section-title">
+<span>Datepicker Widget</span><span class="version-details">version added: 1.0</span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>Description: </strong>Select a date from a popup or inline calendar</p>
+<section id="options"><header><h2 class="underline">Options</h2></header><div id="option-altField" class="api-item first-item">
+<h3>altField<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Selector">Selector</a> or <a href="http://api.jquery.com/Types#jQuery">jQuery</a> or <a href="http://api.jquery.com/Types#Element">Element</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>""</code>
+</div>
+<div>An input element that is to be updated with the selected date from the datepicker. Use the <a href="#option-altFormat"><code>altFormat</code></a> option to change the format of the date within this field. Leave as blank for no alternate field.</div>
+<strong>Code examples:</strong><p>Initialize the datepicker with the altField option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).datepicker({ altField: </code><code class="string">"#actualDate"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the altField option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border=

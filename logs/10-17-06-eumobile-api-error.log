@@ -1,0 +1,73 @@
+2017-10-06 08:47:46 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getKey | Invalid Request
+2017-10-06 08:48:07 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getKey | Invalid Request
+2017-10-06 12:53:29 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getKey | Invalid Request
+2017-10-06 13:19:55 | C:\wamp\www\eumobile_api\ApiFunction\getAccountBalance.php |  | 127.0.0.1 | 1 | getAccountBalance | Welcome to Express Union Mobile. Your New Balance 49025.00 XAF. You are mobile, we also.
+2017-10-06 13:28:45 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 500 XAF to 237694026803, ID: 9321219.  your New Balance 48400.00 XAF.You are mobile, we also.
+2017-10-06 13:30:34 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | reponse du transfert au 237694026803 recu
+2017-10-06 13:30:34 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | transfert au 237694026803 reussi
+2017-10-06 13:35:55 | C:\wamp\www\eumobile_api\ApiFunction\receiveMoney.php |  | 127.0.0.1 | 1 | receiveMoney | decharge effectuee avec succees pour le numero 237694026803 par 237691876792 montant 500 XAF
+2017-10-06 13:36:48 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | receiveMoney | Invalid Request
+2017-10-06 14:57:36 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getkey | Unknown service
+2017-10-06 15:00:25 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getKey | Invalid Request
+2017-10-06 15:02:04 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getKey | This client is not yet allowed to use this service
+2017-10-06 15:04:01 | C:\wamp\www\eumobile_api\ApiFunction\getKey.php |  | 127.0.0.1 | 1 | getKey | Partner Key reset successfully
+2017-10-06 15:06:02 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getaccountBalance | Unknown service
+2017-10-06 15:07:42 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getAccountBalance | Invalid Request
+2017-10-06 15:08:23 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getAccountBalance | This client is not yet allowed to use this service
+2017-10-06 15:09:09 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getAccountBalance | Invalid Request
+2017-10-06 15:10:08 | C:\wamp\www\eumobile_api\ApiFunction\getAccountBalance.php |  | 127.0.0.1 | 1 | getAccountBalance | Welcome to Express Union Mobile. Your New Balance 47920.00 XAF. You are mobile, we also.
+2017-10-06 15:12:00 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashin | Unknown service
+2017-10-06 15:12:43 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashIn | Required inputs not set
+2017-10-06 15:13:46 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashIn | Invalid Request
+2017-10-06 15:15:49 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashIn | This client is not yet allowed to use this service
+2017-10-06 15:17:21 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Subscriber Not Found
+2017-10-06 15:21:44 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Blocked Recipient
+2017-10-06 15:24:42 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashIn | Invalid input parameters
+2017-10-06 15:26:03 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashIn | Invalid input parameters
+2017-10-06 15:29:02 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 500 XAF to 237695283788, ID: 9321225.  your New Balance 47295.00 XAF.You are mobile, we also.
+2017-10-06 15:30:35 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendmoney | Unknown service
+2017-10-06 15:32:43 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendMoney | Required inputs not set
+2017-10-06 15:33:08 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendMoney | Invalid Request
+2017-10-06 15:34:10 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendMoney | This client is not yet allowed to use this service
+2017-10-06 15:36:22 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | reponse du transfert au 235677489970 recu
+2017-10-06 15:36:22 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | transfert au 235677489970 reussi
+2017-10-06 15:37:53 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendMoney | Invalid input parameters
+2017-10-06 15:38:51 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendMoney | Invalid input parameters
+2017-10-06 15:41:48 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | reponse du transfert au 237679680294 recu
+2017-10-06 15:41:49 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | transfert au 237679680294 reussi
+2017-10-06 15:43:31 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | reponse du transfert au 237679680294 recu
+2017-10-06 15:43:31 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | transfert au 237679680294 reussi
+2017-10-06 15:49:59 | C:\wamp\www\eumobile_api\ApiFunction\receiveMoney.php |  | 127.0.0.1 | 1 | receiveMoney | decharge effectuee avec succees pour le numero 237679680294 par 237691876792 montant 1000 XAF
+2017-10-06 15:58:56 | C:\wamp\www\eumobile_api\ApiFunction\receiveMoney.php |  | 127.0.0.1 | 1 | receiveMoney | decharge echouee pour le numero 237679680294 par 237691876792 montant 1000 XAF resultat : Holding Account Not Found
+2017-10-06 16:00:48 | C:\wamp\www\eumobile_api\ApiFunction\receiveMoney.php |  | 127.0.0.1 | 1 | receiveMoney | decharge echouee pour le numero 237679680295 par 237691876792 montant 1000 XAF resultat : Holding Account Not Found
+2017-10-06 16:02:11 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | receivemoney | Unknown service
+2017-10-06 16:02:23 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | receiv | Unknown service
+2017-10-06 16:03:38 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | receiveMoney | Required inputs not set
+2017-10-06 16:04:20 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | receiveMoney | Invalid Request
+2017-10-06 16:05:47 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | receiveMoney | This client is not yet allowed to use this service
+2017-10-06 16:10:06 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | receiveMoney | Invalid Request
+2017-10-06 16:11:15 | C:\wamp\www\eumobile_api\ApiFunction\receiveMoney.php |  | 127.0.0.1 | 1 | receiveMoney | decharge echouee pour le numero 237677489871 par 237691876792 montant 1500 XAF resultat : Holding Account Not Found
+2017-10-06 16:12:58 | C:\wamp\www\eumobile_api\ApiFunction\receiveMoney.php |  | 127.0.0.1 | 1 | receiveMoney | decharge echouee pour le numero 237679680294 par 237691876792 montant 1500 XAF resultat : Holding Account Not Found
+2017-10-06 16:14:36 | C:\wamp\www\eumobile_api\ApiFunction\receiveMoney.php |  | 127.0.0.1 | 1 | receiveMoney | decharge echouee pour le numero 237679680294 par 237691876792 montant 500 XAF resultat : Holding Account Not Found
+2017-10-06 16:17:20 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendpaymentRequests | Unknown service
+2017-10-06 16:20:44 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendPaymentRequest | Required inputs not set
+2017-10-06 16:21:34 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendPaymentRequest | Invalid Request
+2017-10-06 16:23:14 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendPaymentRequest | This client is not yet allowed to use this service
+2017-10-06 16:24:53 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendPaymentRequest | Invalid Request
+2017-10-06 16:29:31 | C:\wamp\www\eumobile_api\ApiFunction\sendPaymentRequest.php |  | 127.0.0.1 | 1 | sendPaymentRequest | Subscriber Not Found
+2017-10-06 16:31:37 | C:\wamp\www\eumobile_api\ApiFunction\sendPaymentRequest.php |  | 127.0.0.1 | 1 | sendPaymentRequest | Blocked Recipient
+2017-10-06 16:34:50 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendPaymentRequest | Invalid input parameters
+2017-10-06 16:39:50 | C:\wamp\www\eumobile_api\ApiFunction\sendPaymentRequest.php |  | 127.0.0.1 | 1 | sendPaymentRequest | demande de paiement effectuee au 237679680294 reference 
+2017-10-06 16:52:39 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-06 16:52:58 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Invalid Request
+2017-10-06 16:53:42 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | This client is not yet allowed to use this service
+2017-10-06 16:54:46 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | payBill1 | Unknown service
+2017-10-06 16:58:35 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-06 16:59:18 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-06 16:59:41 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-06 17:01:32 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | This client is not yet allowed to use this service
+2017-10-06 17:02:21 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-06 17:03:06 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-06 17:04:07 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-06 17:05:49 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-06 17:08:10 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set

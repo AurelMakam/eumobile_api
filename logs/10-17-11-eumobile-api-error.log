@@ -1,0 +1,23 @@
+2017-10-11 16:38:14 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 100 XAF to 237695283788, ID: 9321955.  your New Balance 123410.00 XAF.You are mobile, we also.
+2017-10-11 16:40:15 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Request-Retry Threshold reached
+2017-10-11 16:48:15 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashIn | Invalid input parameters
+2017-10-11 16:48:24 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashIn | Invalid input parameters
+2017-10-11 16:55:35 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashIn | Invalid input parameters
+2017-10-11 17:21:08 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getkey | Unknown service
+2017-10-11 17:24:43 | C:\wamp\www\eumobile_api\index.php |  |  |  |  | please make sure all required fields are set
+2017-10-11 17:25:50 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set
+2017-10-11 17:26:54 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set
+2017-10-11 17:32:09 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set
+2017-10-11 17:32:41 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set
+2017-10-11 17:45:48 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-11 17:47:59 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-11 17:48:41 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getPaymentStatus | Required inputs not set
+2017-10-11 17:51:01 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | payBill | Invalid Request
+2017-10-11 17:55:31 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | payBill | Invalid Request
+2017-10-11 17:57:28 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | payBill | Invalid Request
+2017-10-11 17:58:40 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | payBill | Invalid Request
+2017-10-11 17:59:30 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | payBill | Invalid Request
+2017-10-11 18:00:27 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | payBill | Invalid Request
+2017-10-11 18:03:38 | C:\wamp\www\eumobile_api\ApiFunction\payBill.php |  | 127.0.0.1 | 1 | payBill | Your transaction of BILLPAY 3636363637 has successfully done for the Merchant ENEO  Amount 300.0, trxn id: 9321978( params: biller=>ENEO, billno=>3636363637)
+2017-10-11 18:05:19 | C:\wamp\www\eumobile_api\ApiFunction\payBill.php |  | 127.0.0.1 | 1 | payBill | Technical Failure, Please Try again Later!!( params: biller=>ENEO, billno=>3636363637)
+2017-10-11 18:08:39 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 1500 XAF to 237695283788, ID: 9321980.  your New Balance 120910.00 XAF.You are mobile, we also.

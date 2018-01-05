@@ -1,0 +1,16 @@
+#--------------------------------------------------
+# Répertoire : /repertoire principal/
+#--------------------------------------------------
+
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+# Entree dans la page universite
+RewriteRule ^([A-Za-z0-9\-]+){1}$   index.php?service=$1 [L]

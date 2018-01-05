@@ -1,0 +1,9 @@
+2017-09-07 21:02:01 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | reponse du transfert au 237677489970 recu
+2017-09-07 21:02:01 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | transfert au 237677489970 reussi
+2017-09-07 21:12:24 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | receiveMoney | You are not authorized to access this service, or internal server error
+2017-09-07 21:13:32 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | receiveMoney | Required inputs not set
+2017-09-07 21:15:22 | C:\wamp\www\eumobile_api\ApiFunction\receiveMoney.php |  | 127.0.0.1 | 1 | receiveMoney | decharge effectuee avec succees pour le numero 237677489970 par 237691876792 montant 1000 XAF
+2017-09-07 21:20:09 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendMoney | Invalid Request
+2017-09-07 21:20:37 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | reponse du transfert au 237677489970 recu
+2017-09-07 21:20:37 | C:\wamp\www\eumobile_api\ApiFunction\sendMoney.php |  | 127.0.0.1 | 1 | sendMoney | transfert au 237677489970 reussi
+2017-09-07 21:25:41 | C:\wamp\www\eumobile_api\ApiFunction\receiveMoney.php |  | 127.0.0.1 | 1 | receiveMoney | decharge effectuee avec succees pour le numero 237677489970 par 237691876792 montant 1000 XAF

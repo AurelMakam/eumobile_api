@@ -1,0 +1,14 @@
+2017-10-20 14:18:40 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | getKey | Invalid Request
+2017-10-20 14:20:17 | C:\wamp\www\eumobile_api\ApiFunction\getKey.php |  | 127.0.0.1 | 1 | getKey | Partner Key reset successfully
+2017-10-20 14:29:59 | C:\wamp\www\eumobile_api\ApiFunction\getAccountBalance.php |  | 127.0.0.1 | 1 | getAccountBalance | Invalid PIN
+2017-10-20 14:30:58 | C:\wamp\www\eumobile_api\ApiFunction\getAccountBalance.php |  | 127.0.0.1 | 1 | getAccountBalance | Welcome to Express Union Mobile. Your New Balance 83964.00 XAF. You are mobile, we also.
+2017-10-20 14:36:52 | C:\wamp\www\eumobile_api\ApiFunction\getAccountBalance.php |  | 127.0.0.1 | 1 | getAccountBalance | Welcome to Express Union Mobile. Your New Balance 83939.00 XAF. You are mobile, we also.
+2017-10-20 14:39:14 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set
+2017-10-20 14:40:17 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 |  |  | please make sure all required fields are set
+2017-10-20 14:44:22 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 1000 XAF to 237695283788, ID: 9324162.  your New Balance 82839.00 XAF.You are mobile, we also.
+2017-10-20 14:47:52 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | sendMoney | Invalid input parameters
+2017-10-20 14:50:13 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | payBill | Invalid Request
+2017-10-20 14:54:56 | C:\wamp\www\eumobile_api\ApiFunction\payBill.php |  | 127.0.0.1 | 1 | payBill | Payment Does Not Exist( params: biller=>ENEO, billno=>123456789)
+2017-10-20 14:59:19 | C:\wamp\www\eumobile_api\ApiFunction\payBill.php |  | 127.0.0.1 | 1 | payBill | Technical Failure, Please Try again Later!!( params: biller=>ENEO, billno=>3636363649)
+2017-10-20 15:04:58 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | payBill | Invalid input parameters
+2017-10-20 15:10:49 | C:\wamp\www\eumobile_api\ApiFunction\payBill.php |  | 127.0.0.1 | 1 | payBill | Your transaction of BILLPAY 363636355649 has successfully done for the Merchant ENEO  Amount 500.0, trxn id: 9324192( params: biller=>ENEO, billno=>363636355649)

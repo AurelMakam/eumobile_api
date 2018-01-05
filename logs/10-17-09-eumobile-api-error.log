@@ -1,0 +1,5 @@
+2017-10-09 17:23:03 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashin | Unknown service
+2017-10-09 17:23:15 | C:\wamp\www\eumobile_api\index.php |  | 127.0.0.1 | 1 | cashIn | Invalid Request
+2017-10-09 17:29:04 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 100 XAF to 237695283788, ID: 9321591.  your New Balance 128820.00 XAF.You are mobile, we also.
+2017-10-09 17:30:52 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Request-Retry Threshold reached
+2017-10-09 17:32:03 | C:\wamp\www\eumobile_api\ApiFunction\cashIn.php |  | 127.0.0.1 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 100 XAF to 237695283788, ID: 9321593.  your New Balance 128620.00 XAF.You are mobile, we also.
