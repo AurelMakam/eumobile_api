@@ -1,0 +1,34 @@
+2018-07-09 06:13:50 | /var/www/html/eumobile_api/v2.1/index.php |  | 172.16.11.20 | 1 | getAccountBalance | This client is not yet allowed to use this service
+2018-07-09 06:19:36 | /var/www/html/eumobile_api/v2.1/ApiFunction/getAccountBalance_new.php |  | 172.16.11.20 | 1 | getAccountBalance | Transaction Successful :10000001185.0000
+2018-07-09 06:24:16 | /var/www/html/eumobile_api/v2.1/index.php |  | 172.16.11.20 | 1 | cashIn | All required arguments are not defined
+2018-07-09 06:25:15 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Request cancelled due to duplicate reference id:1
+2018-07-09 06:27:15 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Request cancelled due to duplicate reference id:1
+2018-07-09 06:27:59 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Request cancelled due to duplicate reference id:2
+2018-07-09 06:38:43 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Request cancelled due to duplicate reference id:3
+2018-07-09 06:40:40 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | This subscriber is not eligible to this service : 237699876016
+2018-07-09 06:43:08 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Request cancelled due to duplicate reference id:4
+2018-07-09 06:58:05 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 1000 XAF to 237699876016, ID: 10405683.  your New Balance 10000000185.00 XAF.You are mobile, we also.
+2018-07-09 06:59:44 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Request-Retry Threshold reached
+2018-07-09 07:02:10 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Request cancelled due to duplicate reference id:5
+2018-07-09 07:03:46 | /var/www/html/eumobile_api/v2.1/ApiFunction/getAccountBalance_new.php |  | 172.16.11.20 | 1 | getAccountBalance | Transaction Successful :10000000185.0000
+2018-07-09 07:03:51 | /var/www/html/eumobile_api/v2.1/ApiFunction/getAccountBalance_new.php |  | 172.16.11.20 | 1 | getAccountBalance | Transaction Successful :10000000185.0000
+2018-07-09 07:17:00 | /var/www/html/eumobile_api/v2.1/ApiFunction/getTransactionDetails.php |  | 172.16.11.20 | 1 | getTransactionDetails | Transaction not found
+2018-07-09 08:06:28 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 1000 XAF to 237699876016, ID: 10405714.  your New Balance 9999999185.00 XAF.You are mobile, we also.
+2018-07-09 08:17:44 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 1000 XAF to 237699876016, ID: 10405718.  your New Balance 9999998185.00 XAF.You are mobile, we also.
+2018-07-09 08:26:27 | /var/www/html/eumobile_api/v2.1/index.php |  | 172.16.11.20 | 27 | getTransactionDetails | This client is not yet allowed to use this service
+2018-07-09 11:53:59 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 1000 XAF to 237699876016, ID: 10405740.  your New Balance 9999980864.00 XAF.You are mobile, we also.
+2018-07-09 11:56:24 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Request cancelled due to duplicate reference id:7
+2018-07-09 11:56:32 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Request cancelled due to duplicate reference id:7
+2018-07-09 11:59:07 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 1000 XAF to 237699876016, ID: 10405741.  your New Balance 9999979864.00 XAF.You are mobile, we also.
+2018-07-09 12:04:53 | /var/www/html/eumobile_api/v2.1/ApiFunction/getTransactionDetails.php |  | 172.16.11.20 | 1 | getTransactionDetails | Transaction Successful : 10405740
+2018-07-09 12:09:37 | /var/www/html/eumobile_api/v2.1/ApiFunction/getTransactionDetails.php |  | 172.16.11.20 | 1 | getTransactionDetails | Transaction Successful : 10405740
+2018-07-09 12:43:08 | /var/www/html/eumobile_api/v2.1/index.php |  | 172.16.11.20 | 1 | getTransactionDetails | All required arguments are not defined
+2018-07-09 12:43:43 | /var/www/html/eumobile_api/v2.1/index.php |  | 172.16.11.20 | 1 | getReferenceIdDetails | You are not authorized to access this service
+2018-07-09 12:45:03 | /var/www/html/eumobile_api/v2.1/index.php |  | 172.16.11.20 | 1 | getReferenceIdDetails | Invalid Request
+2018-07-09 12:48:43 | /var/www/html/eumobile_api/v2.1/ApiFunction/getReferenceIdDetails.php |  | 172.16.11.20 | 1 | getReferenceIdDetails | Transaction Successful : 4
+2018-07-09 12:57:28 | /var/www/html/eumobile_api/v2.1/ApiFunction/getAccountDetails.php |  | 172.16.11.20 | 1 | getAccountDetails | Transaction Successful : 237691876792
+2018-07-09 12:59:46 | /var/www/html/eumobile_api/v2.1/ApiFunction/getAccountDetails.php |  | 172.16.11.20 | 1 | getAccountDetails | Transaction Successful : 237691876792
+2018-07-09 13:04:37 | /var/www/html/eumobile_api/v2.1/ApiFunction/getBillDetails.php |  | 172.16.11.20 | 1 | getBillDetails | {"statut":100,"billno":"303332764","amount":"3000","customer_id":"201341696","customer_name":"FAIBOH AND","bill_duedate":"2019-03-21 00:04:57.00000","payment_status":"Not Paid"}
+2018-07-09 13:09:12 | /var/www/html/eumobile_api/v2.1/ApiFunction/getCommissionBalance.php |  | 172.16.11.20 | 1 | getCommissionBalance | Transaction Successful :9999956857.7800
+2018-07-09 13:15:49 | /var/www/html/eumobile_api/v2.1/ApiFunction/payBill.php |  | 172.16.11.20 | 1 | payBill | Your transaction of BILLPAY 303332764 has successfully done for the Merchant ENEO  Amount 3000, trxn id: 10405759( params: biller=>ENEO, billno=>303332764)
+2018-07-09 13:17:05 | /var/www/html/eumobile_api/v2.1/ApiFunction/payBill.php |  | 172.16.11.20 | 1 | payBill | Bill already paid : 303332764

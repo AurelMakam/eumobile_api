@@ -40,16 +40,8 @@ class Chiffrement {
     }
 }
 
-<pre>
-clair     : <?php echo $clair."   <br/>"; ?>
-crypt     : <?php echo $crypt."   <br/>"; ?>
-raw crypt : <?php echo base64_decode($crypt)."   <br/>"; ?>
-decrypt   : <?php echo $decrypt."   <br/>"; ?>
-</pre>
-
 ?>
 
-VTeWEHZCT3I2uh6vrH+ieA==
 <html>
     <head>
         <meta charset="utf-8">

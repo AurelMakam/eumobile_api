@@ -14,8 +14,7 @@ require_once './common/database.php';
 require_once './common/inputValidation.php';
 require_once './common/authentication.php';
 require_once './common/functions.php';
-$ip = getIp();
-
+echo encrypt("0856") ;
 if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST['pwd'] != "" && isset($_GET['service']) && $_GET['service'] != "") {
 
     $partnerId = filter_input(INPUT_POST, "id");
@@ -33,7 +32,7 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
     //1- vérifier si l'id existe et l'IP autorisée
     if (authenticatePartner($partnerId, $ip, $partnerPwd, $connection)) {
         //identifier le service
-
+        $partnerDetail = PartnerDetails($partnerID, $connection);
         if (strcmp($service, "getKey") == 0) {
             // 2- vérifier si le partenaire a droit à ce service
             $serviceId = getServiceId($service, $connection);
@@ -62,7 +61,8 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                 managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][6]);
                 echo json_encode(array("statut" => 402, "message" => $langFront["Label"][6]));
             }
-        } elseif (strcmp($service, "getAccountBalance") == 0) {
+        } 
+        elseif (strcmp($service, "getAccountBalance") == 0) {
             // 2- vérifier si le partenaire a droit à ce service
             $serviceId = getServiceId($service, $connection);
             if (strcmp($serviceId, -1) != 0) {
@@ -73,7 +73,7 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                         $m_hash = filter_input(INPUT_POST, "hash");
                         $validmd5 = validateMd5($partnerId . $partnerPwd, $partnerId, $m_hash, $connection);
                         if ($validmd5 == 1) {
-                            include_once './ApiFunction/getAccountBalance.php';
+                            include_once './ApiFunction/getAccountBalance_new.php';
                         } else {
                             managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][13]);
                             echo json_encode(array("statut" => 403, "message" => $langFront["Label"][13]));
@@ -90,7 +90,37 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                 managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][6]);
                 echo json_encode(array("statut" => 402, "message" => $langFront["Label"][6]));
             }
-        } elseif (strcmp($service, "sendPaymentRequest") == 0) {
+        } 
+        elseif (strcmp($service, "getCommissionBalance") == 0) {
+            // 2- vérifier si le partenaire a droit à ce service
+            $serviceId = getServiceId($service, $connection);
+            if (strcmp($serviceId, -1) != 0) {
+                $privilege = getPartnerPrivilege($partnerId, $serviceId, $connection);
+                if (strcmp($privilege, 1) == 0) {
+                    //3- check m_hash reçu en POST
+                    if (isset($_POST['hash']) && $_POST['hash'] != "") {
+                        $m_hash = filter_input(INPUT_POST, "hash");
+                        $validmd5 = validateMd5($partnerId . $partnerPwd, $partnerId, $m_hash, $connection);
+                        if ($validmd5 == 1) {
+                            include_once './ApiFunction/getCommissionBalance.php';
+                        } else {
+                            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][13]);
+                            echo json_encode(array("statut" => 403, "message" => $langFront["Label"][13]));
+                        }
+                    } else {
+                        managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][4]);
+                        echo json_encode(array("statut" => 403, "message" => $langFront["Label"][4]));
+                    }
+                } else {
+                    managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][3]);
+                    echo json_encode(array("statut" => 402, "message" => $langFront["Label"][3]));
+                }
+            } else {
+                managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][6]);
+                echo json_encode(array("statut" => 402, "message" => $langFront["Label"][6]));
+            }
+        }
+        elseif (strcmp($service, "sendPaymentRequest") == 0) {
 
             $serviceId = getServiceId($service, $connection);
             if (strcmp($serviceId, -1) != 0) {
@@ -103,9 +133,7 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                         $amount = filter_input(INPUT_POST, "amount");
                         $currency = filter_input(INPUT_POST, "currency");
                         $date = filter_input(INPUT_POST, "date");
-
                         $duedate = filter_input(INPUT_POST, "duedate");
-
                         $custname = filter_input(INPUT_POST, "name");
                         $phone = filter_input(INPUT_POST, "phone");
                         $customerid = filter_input(INPUT_POST, "custid");
@@ -216,14 +244,15 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                 $privilege = getPartnerPrivilege($partnerId, $serviceId, $connection);
                 if (strcmp($privilege, "1") == 0) {
                     //3- check m_hash reçu en POST
-                    if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['phone']) && $_POST['phone'] != "" && isset($_POST['amount']) && $_POST['amount'] != "") {
+                    if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['phone']) && $_POST['phone'] != "" && isset($_POST['amount']) && $_POST['amount'] != "" && isset($_POST['sender_phone']) && $_POST['sender_phone'] != "") {
                         $m_hash = filter_input(INPUT_POST, "hash");
                         $phone = filter_input(INPUT_POST, "phone");
                         $amount = filter_input(INPUT_POST, "amount");
+                        $s_phone = filter_input(INPUT_POST, "sender_phone");
 
-                        if (checkAmount($amount) && checkMobileNumber($phone)) {
+                        if (checkAmount($amount) && checkMobileNumber($phone) && checkMobileNumber($s_phone)) {
 
-                            $validmd5 = validateMd5($partnerId . $partnerPwd . $amount . $phone, $partnerId, $m_hash, $connection);
+                            $validmd5 = validateMd5($partnerId . $partnerPwd . $amount . $phone . $s_phone, $partnerId, $m_hash, $connection);
 
                             if ($validmd5 == "1") {
 
@@ -254,7 +283,7 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                 $privilege = getPartnerPrivilege($partnerId, $serviceId, $connection);
                 if (strcmp($privilege, "1") == 0) {
                     //3- check m_hash reçu en POST
-                    if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['dest_phone']) && $_POST['dest_phone'] != "" && isset($_POST['amount']) && $_POST['amount'] != "" && isset($_POST['code']) && $_POST['code'] != "" && isset($_POST['idnumb']) && $_POST['idnumb'] != "" && isset($_POST['dest_name']) && $_POST['dest_name'] != "" && isset($_POST['idtype']) && $_POST['idtype'] != "") {
+                    if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['dest_phone']) && $_POST['dest_phone'] != "" && isset($_POST['dest_name']) && $_POST['dest_name'] != "" && isset($_POST['amount']) && $_POST['amount'] != "" && isset($_POST['code']) && $_POST['code'] != "" && isset($_POST['idnumb']) && $_POST['idnumb'] != "") {
                         $m_hash = filter_input(INPUT_POST, "hash");
                         $d_phone = filter_input(INPUT_POST, "dest_phone");
                         $d_name = filter_input(INPUT_POST, "dest_name");
@@ -264,7 +293,7 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                         $code = filter_input(INPUT_POST, "code");
                         $s_name = filter_input(INPUT_POST, "send_name");
                         $s_phone = filter_input(INPUT_POST, "send_phone");
-                        if (checkAmount($amount) && checkMobileNumber($s_phone) && checkMobileNumber($d_phone)) {
+                        if (checkAmount($amount) && checkMobileNumber($d_phone)) {
                             $validmd5 = validateMd5($partnerId . $partnerPwd . $amount . $d_phone . $d_name . $cnitype . $cni . $code . $s_name . $s_phone, $partnerId, $m_hash, $connection);
                             if ($validmd5 == "1") {
                                 $date = date("Y-m-d H:i:s");
@@ -374,10 +403,9 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                     //3- check m_hash reçu en POST
                     if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['reference']) && $_POST['reference'] != "" && isset($_POST['merchant']) && $_POST['merchant'] != "" && isset($_POST['amount']) && $_POST['amount'] != "") {
                         $m_hash = filter_input(INPUT_POST, "hash");
-                        $trans_type = filter_input(INPUT_POST, "type");
                         $number = filter_input(INPUT_POST, "n");
                         if ($merchantcode != -1 && checkAmount($amount)) {
-                            $validmd5 = validateMd5($partnerId . $partnerPwd . $reference . $merchant . $amount, $partnerId, $m_hash, $connection);
+                            $validmd5 = validateMd5($partnerId . $partnerPwd . $number, $partnerId, $m_hash, $connection);
                             if ($validmd5 == 1) {
                                 include_once './ApiFunction/getAccountStatement.php';
                             } else {
@@ -389,7 +417,6 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                             echo json_encode(array("statut" => 408, "message" => $langFront["Label"][19]));
                         }
                     } else {
-
                         managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][4]);
                         echo json_encode(array("statut" => 403, "message" => $langFront["Label"][4]));
                     }
@@ -401,20 +428,17 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                 managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][6]);
                 echo json_encode(array("statut" => 402, "message" => $langFront["Label"][6]));
             }
-        } elseif (strcmp($service, "getAccountDetails") == 0) {
+        } 
+        elseif (strcmp($service, "getAccountDetails") == 0) {
             $serviceId = getServiceId($service, $connection);
-
             if (strcmp($serviceId, "-1") != 0) {
                 $privilege = getPartnerPrivilege($partnerId, $serviceId, $connection);
                 if (strcmp($privilege, "1") == 0) {
-
                     if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['account']) && $_POST['account'] != "") {
                         $m_hash = filter_input(INPUT_POST, "hash");
-
                         $phone = filter_input(INPUT_POST, "account");
                         if (checkMobileNumber($phone)) {
                             $validmd5 = validateMd5($partnerId . $partnerPwd . $phone, $partnerId, $m_hash, $connection);
-
                             if ($validmd5 == 1) {
                                 include_once './ApiFunction/getAccountDetails.php';
                             } else {
@@ -438,7 +462,42 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                 managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][6]);
                 echo json_encode(array("statut" => 402, "message" => $langFront["Label"][6]));
             }
-        } elseif (strcmp($service, "getBillDetails") == 0) {
+        } 
+        elseif (strcmp($service, "getTransactionDetails") == 0){
+            $serviceId = getServiceId($service, $connection);
+            if (strcmp($serviceId, "-1") != 0) {
+                $privilege = getPartnerPrivilege($partnerId, $serviceId, $connection);
+                if (strcmp($privilege, "1") == 0) {
+                    if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['transaction']) && $_POST['transaction'] != "") {
+                        $m_hash = filter_input(INPUT_POST, "hash");
+                        $transaction = filter_input(INPUT_POST, "transaction");
+                        if (is_numeric($transaction)) {
+                            $validmd5 = validateMd5($partnerId . $partnerPwd . $transaction, $partnerId, $m_hash, $connection);
+                            if ($validmd5 == 1) {
+                                include_once './ApiFunction/getTransactionDetails.php';
+                            } else {
+                                managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][13]);
+                                echo json_encode(array("statut" => 403, "message" => $langFront["Label"][13]));
+                            }
+                        } else {
+                            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][20]);
+                            echo json_encode(array("statut" => 408, "message" => $langFront["Label"][20]));
+                        }
+                    } else {
+
+                        managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][4]);
+                        echo json_encode(array("statut" => 403, "message" => $langFront["Label"][4]));
+                    }
+                } else {
+                    managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][3]);
+                    echo json_encode(array("statut" => 402, "message" => $langFront["Label"][3]));
+                }
+            } else {
+                managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][6]);
+                echo json_encode(array("statut" => 402, "message" => $langFront["Label"][6]));
+            }
+        }
+        elseif (strcmp($service, "getBillDetails") == 0) {
             $serviceId = getServiceId($service, $connection);
 
             if (strcmp($serviceId, "-1") != 0) {
@@ -474,7 +533,10 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
                 managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][6]);
                 echo json_encode(array("statut" => 402, "message" => $langFront["Label"][6]));
             }
-        } else {
+        } 
+         
+        
+        else {
             managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][6]);
             echo json_encode(array("statut" => 406, "message" => $langFront["Label"][6]));
         }
@@ -485,7 +547,6 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
 
     disconnectToDb($connection);
 } else {
-
     managerLogSimple(__FILE__, __CLASS__, $ip, null, null, $langFront["Label"][1]);
     echo json_encode(array("statut" => 400, "message" => $langFront["Label"][1]));
 }

@@ -1,3 +1,2 @@
 <?php
-    $pos = strpos("bonjour", "ji");
-    echo "pos = ".$pos;
+    header('Location: ../index.php');

@@ -63,6 +63,11 @@ $lang = $_SESSION['LANG'];
                             <div class="panel-body">
                                 <div class="row" style="text-align: center">
                                     
+                                    <a href="new.php" >Créer un compte Test API</a>
+                                    <br/><br/>
+                                </div>
+                                <div class="row" style="text-align: center">
+                                    
                                     <a href="getKey.php" >Tester le service getKey (clé de salage)</a>
                                     <br/><br/>
                                 </div>

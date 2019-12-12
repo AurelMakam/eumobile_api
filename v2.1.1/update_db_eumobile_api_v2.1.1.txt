@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS `tb_cashin` (
+  `col_transaction_id` varchar(20) NOT NULL,
+  `col_sendername` varchar(200) NOT NULL,
+  `col_sendercountry` varchar(30) NOT NULL,
+  `col_destphone` varchar(20) NOT NULL,
+  `col_destname` varchar(200) NOT NULL,
+  `col_amount` varchar(50) NOT NULL,
+  `col_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`col_transaction_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `tb_service` (`col_id`, `col_name`, `col_value`, `col_description`, `col_keywords`, `col_status`) VALUES  (15, 'getClaimStatus', '', 'CLAIM_STATUS', '', 1);
+INSERT INTO `tb_service` (`col_id`, `col_name`, `col_value`, `col_description`, `col_keywords`, `col_status`) VALUES  (16, 'getAccountStatement', '', 'ACCOUNT_STATEMENT', '', 1);
+CREATE TABLE IF NOT EXISTS `tb_international` (
+  `col_id` int(11) NOT NULL AUTO_INCREMENT,
+  `col_partner_id` varchar(20) NOT NULL,
+  `col_status` int(1) NOT NULL,
+  PRIMARY KEY (`col_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='identifie les partenaires pour les quels on exigera le nom lors du cashIn' AUTO_INCREMENT=2 ;
+ALTER TABLE `tb_partner` ADD `col_subaccount ` VARCHAR( 15 ) NULL DEFAULT NULL AFTER `col_code` ,ADD `col_subaccountmpin` VARCHAR( 50 ) NULL DEFAULT NULL AFTER `col_subaccount` ;
+CREATE TABLE IF NOT EXISTS `tb_reclammations` (
+  `col_id` int(100) NOT NULL AUTO_INCREMENT,
+  `col_partner_id` varchar(20) NOT NULL,
+  `col_phone` varchar(15) NOT NULL,
+  `col_name` varchar(255) DEFAULT NULL,
+  `col_amount` varchar(100) NOT NULL,
+  `col_transaction` varchar(20) NOT NULL,
+  `col_date_transaction` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `col_transaction_reload` varchar(20) DEFAULT NULL,
+  `col_date_transaction_reload` timestamp NULL DEFAULT NULL,
+  `col_description` varchar(300) NOT NULL COMMENT 'motif de la reclammation',
+  `col_status` int(1) NOT NULL,
+  PRIMARY KEY (`col_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

@@ -1,0 +1,8 @@
+2018-07-10 04:52:33 | /var/www/html/eumobile_api/v2.1/index.php |  | 172.16.11.20 | 1 | sendMoney | All required arguments are not defined
+2018-07-10 04:52:48 | /var/www/html/eumobile_api/v2.1/index.php |  | 172.16.11.20 | 1 | sendMoney | All required arguments are not defined
+2018-07-10 05:24:01 | /var/www/html/eumobile_api/v2.1/ApiFunction/sendMoney.php |  | 172.16.11.20 | 1 | sendMoney | reponse du transfert au 237699876016 recu
+2018-07-10 05:24:03 | /var/www/html/eumobile_api/v2.1/ApiFunction/sendMoney.php |  | 172.16.11.20 | 1 | sendMoney | transfert au 237699876016 reussi
+2018-07-10 06:55:36 | /var/www/html/eumobile_api/v2.1/ApiFunction/receiveMoney.php |  | 172.16.11.20 | 1 | receiveMoney | decharge effectuee avec succees pour le numero 237699876016 par 237691876792 montant 1000 XAF
+2018-07-10 09:58:57 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | This subscriber is not eligible to this service : 237698762982
+2018-07-10 10:00:06 | /var/www/html/eumobile_api/v2.1/ApiFunction/getReferenceIdDetails.php |  | 172.16.11.20 | 1 | getReferenceIdDetails | Transaction Successful : 11
+2018-07-10 10:11:43 | /var/www/html/eumobile_api/v2.1/ApiFunction/cashIn.php |  | 172.16.11.20 | 1 | cashIn | Welcome to Express Union Mobile. Dear Customer, You have transferred 1000 XAF to 237698762982, ID: 10406568.  your New Balance 9999975714.00 XAF.You are mobile, we also.

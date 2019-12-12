@@ -61,7 +61,7 @@ $lang = $_SESSION['LANG'];
                                 Liens de test des fonctionnalités
                             </div>
                             <div class="panel-body">
-                                <form role="form" id="formnewmerchant" action="http://localhost/eumobile_api/getAccountBalance" method="post" >
+                                <form role="form" id="formnewmerchant" action="http://172.16.11.197/eumobile_api/getAccountBalance" method="post" >
                                     <div class="form-group">
                                         <label>Id</label>
                                         <input class="form-control"  name="id" id="id">

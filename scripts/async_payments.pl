@@ -27,16 +27,16 @@ if (length ($directory) == 1) {
 # décommenter la ligne ci-dessous sous Windows
 print "directory = ".$directory;
 $directory = "";
-my $db      =   "db_name";
+my $db      =   "db_eumobile_api";
 my $host    =   "localhost";
 my $port    =   "3306";
-my $user    =   "user";
-my $pwd     =   "pass";
+my $user    =   "eumm_api";
+my $pwd     =   "DbEUmmAPi@!";
 #Parametres de chaque partenaire
 
 ############### UNIVERSITE DE BUEA ################
-my $id_go_groups = "5";
-my $id_buea = "4";
+my $id_go_groups = "8";
+my $id_buea = "11";
 my $client_secret = 'ke.p6f=)Xy5d!TGLw:*ED(^gq_$9Bv-W/jHF]x2hVA@s>{S;Q#';
 my $post_url_go_groups   =   "https://p-r.site/payments_api/eu_money_payment_notification_api_v1.php";
 my $post_url_ubuea   =   "https://dev.go-student.net/test/public/index.php/student/payment/eu/tuition_medical/fee/notify";
@@ -49,7 +49,7 @@ my $merchant_secret = "XxrdmqLWKhasmIht";
 my $provider_name = "EXPRESS UNION";
 my $payment_status = "PAID";
 my $currency = "XAF";
-my $id_wecashup = "3";
+my $id_wecashup = "2";
 my $post_url_wecashup = "https://www.wecashup.com/api/v1.0/providers/" . $merchant_uid . "/webhooks/";
 #####################################################
 
