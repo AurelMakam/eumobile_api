@@ -123,6 +123,10 @@ function checkAmount($amount) {
     return (is_numeric($amount) & $amount <= MAX_AMOUNT & $amount >= MIN_AMOUNT);
 }
 
+function checkAmountBank($amount) {
+//    echo "here";
+    return (is_numeric($amount) & $amount <= MAX_AMOUNT_BANK & $amount >= MIN_AMOUNT_BANK);
+}
 /* :: End of function calculateMd5 ******************************************************************************************************* */
 
 
@@ -1357,8 +1361,8 @@ function getAccountsList($phone, $dbConnexionID, $informixConnection) {
         $res = $stmt->fetch(PDO::FETCH_BOTH);
         if (strcmp($res['MBA_ABBR'], $phone) == 0) {
             $name = "";
-            $tab = explode(" ", $res['MBA_NAME']);
-            foreach ($tab as $a_name) {
+            $tab2 = explode(" ", $res['MBA_NAME']);
+            foreach ($tab2 as $a_name) {
                 if (strlen($a_name) > 4) {
                     $a_name = substr($a_name, 0, 4) . "***";
                 } else {
@@ -1366,7 +1370,7 @@ function getAccountsList($phone, $dbConnexionID, $informixConnection) {
                 }
                 $name .= $a_name . " ";
             }
-            $tab[] = array("type-compte" => "EUMM", "phone" => $res['MBA_ABBR'], "name" => $name, "statut" => getStatus($res['MBA_STATUS_ID']), "plan" => $res['MBSPL_ABBR'], "balance" => $res['MBW_VALUE']);
+            $tab[] = array("type-compte" => "EUMM", "phone" => $res['MBA_ABBR'], "name" => $name, "statut" => getStatus($res['MBA_STATUS_ID']), "plan" => $res['MBSPL_ABBR']);
         }
 
         // Recherche compte SOPRA
@@ -1374,7 +1378,7 @@ function getAccountsList($phone, $dbConnexionID, $informixConnection) {
         $result = mysqli_query($dbConnexionID, $Query2);
         if (mysqli_num_rows($result) > 0) {
             while ($res = mysqli_fetch_assoc($result)) {
-                $tab[] = array("type-compte" => "BANQUE", "numero" => $res['col_numero_compte'], "agence" => $res['col_code_agence'], "chapitre" => $res['col_chapitre'], "nom" => ( substr ($res['col_nom'],10) ), "telephone" => $res['col_telephone'], "statut" => $res['col_statut']);
+                $tab[] = array("type-compte" => "BANQUE", "numero" => $res['col_numero_compte'], "agence" => $res['col_code_agence'], "chapitre" => $res['col_chapitre'], "nom" => ( substr ($res['col_nom_client'],0,10) ), "telephone" => $res['col_telephone']);
             }
         }
         return $tab ;
@@ -1382,5 +1386,58 @@ function getAccountsList($phone, $dbConnexionID, $informixConnection) {
 
         managerLogDB(__FILE__, __CLASS__, __FUNCTION__, __LINE__, $Query, $ex->getMessage());
         return -1;
+    }
+}
+
+function BankAccountDetails($branch_code, $account, $dbConnexionID) {
+    $tab = array();
+    // recherche compte EUMM
+    try{
+        // Recherche compte SOPRA
+        $Query2 = "SELECT * FROM tb_compte_sopra WHERE col_code_agence = '" . $branch_code . "' AND col_numero_compte = '".$account."'";
+        $result = mysqli_query($dbConnexionID, $Query2);
+        if (mysqli_num_rows($result) > 0) {
+            $res = mysqli_fetch_assoc($result);
+            return array("type-compte" => "BANQUE", "numero" => $res['col_numero_compte'], "agence" => $res['col_code_agence'], "chapitre" => $res['col_chapitre'], "nom" => ( substr ($res['col_nom_client'],0,10) ), "telephone" => $res['col_telephone'], "statut" => $res['col_statut'] == 1?'Active':'Blocked');
+        }
+        else{
+            return null;
+        }
+        
+    } catch (Exception $ex) {
+
+        managerLogDB(__FILE__, __CLASS__, __FUNCTION__, __LINE__, $Query2, $ex->getMessage());
+        return -1;
+    }
+}
+
+/**
+ * 
+ * @param type $partnerId
+ * @param type $trans_id
+ * @param type $branch_code
+ * @param type $account_number
+ * @param type $account_name
+ * @param type $chapter
+ * @param type $amount
+ * @param type $motif
+ * @param type $datetime
+ * @param type $result_desc
+ * @param type $status
+ * @param type $dbConnexionID
+ * @return boolean
+ */
+function AddBankTransaction($partnerId, $trans_id, $branch_code, $phone, $account_number, $account_name, $chapter, $amount, $motif, $datetime, $result_desc, $status, $dbConnexionID) {
+    $sqlQuery = "INSERT INTO tb_bank_transactions(col_transaction_id,col_partner_id,col_branch_code, col_telephone, col_numero_compte,col_nom_compte,col_chapitre ,col_montant,col_motif ,col_datetime ,col_result_desc ,col_statut ) VALUES ('" . $trans_id . "','" . $partnerId . "','" . $branch_code . "', '".$phone."', '" . $account_number . "','" . $account_name . "','" . $chapter . "','" . $amount . "','" . $motif . "','" . $datetime . "','" . $result_desc . "','" . $status . "')";
+    try {
+        if(mysqli_query($dbConnexionID, $sqlQuery)){
+            return TRUE;
+        }
+        else{
+            return FALSE ;
+        }
+    } catch (Exception $ex) {
+        managerLogDB(__FILE__, __CLASS__, __FUNCTION__, __LINE__, $sqlQuery, $ex->getMessage());
+        return FALSE;
     }
 }

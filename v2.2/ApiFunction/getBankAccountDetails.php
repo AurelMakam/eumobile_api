@@ -13,34 +13,26 @@ if (isset($partnerId) && $partnerId != "") {
      * 4- si le numéro existe afficher en JSON: numero, nom, statut  
      */
     try {
-        $informix = connectToInformixDb($connection);
-        if($informix != -1){
-        $result = SubsDetails($phone, $informix);
-        $informix = null;
-        unset($informix);
+        
+        $result = BankAccountDetails($branch_code, $account_number , $connection);
+        
         if (is_null($result)) {
-            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][21]);
             saveRequest($serviceId, $partnerId, $m_hash, "", 0, $connection);
-            echo json_encode(array("statut" => 200, "message" => $langFront["Label"][21]));
+            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][25]);
+            echo json_encode(array("statut" => 200, "message" => $langFront["Label"][25]));
         } elseif ($result == -1) {
-            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][18]);
             saveRequest($serviceId, $partnerId, $m_hash, "", 0, $connection);
+            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][18]);
             echo json_encode(array("statut" => 101, "message" => $langFront["Label"][18]));
         }
         else{
-            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][7]." : ".$phone);
             saveRequest($serviceId, $partnerId, $m_hash, "", 1, $connection);
-            echo json_encode(array("statut" => 100, "phone" => $result["phone"], "accountName"=>$result["name"],"accountStatus"=>$result["statut"],"accountPlan"=>$result["plan"]));
-        }
-        }else {
-                managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][34]);
-                saveRequest($serviceId, $partnerId, $m_hash, $amount, 0, $connection);
-                echo json_encode(array("statut" => 101, "message" => $langFront["Label"][18]));
+            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][7]." : ".$result["numero"]);
+            echo json_encode(array("statut" => 100, "message" => $langFront["Label"][7], "account_type" => $result["type-compte"], "account_number"=>$result["numero"],"branch_code"=>$result["agence"],"chapter"=>$result["chapitre"],"account_name"=>$result["nom"],"phone"=>$result["telephone"],"account_status"=>$result["statut"]));
             }
-        
     } catch (Exception $e) {
-        managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $e->getMessage());
         saveRequest($serviceId, $partnerId, $m_hash, "", 0, $connection);
+        managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $e->getMessage());
         echo json_encode(array("statut" => 101, "message" => $langFront["Label"][18]));
     }
 }

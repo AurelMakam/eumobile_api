@@ -12,8 +12,6 @@ require_once './ressources/language.php';
 require_once './ressources/define.php';
 require_once './common/log.php';
 require_once './common/database.php';
-require_once './common/inputValidation.php';
-require_once './common/authentication.php';
 require_once './common/functions.php';
 $ip = getIp();
 if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST['pwd'] != "" && isset($_GET['service']) && $_GET['service'] != "") {
@@ -652,22 +650,56 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST[
             if ($serviceId != -1) {
                 $privilege = getPartnerPrivilege($partnerId, $serviceId, $connection);
                 if ($privilege) {
-                    if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['account_number']) && $_POST['account_number'] != "" && isset($_POST['bank_code']) && $_POST['bank_code'] != "") {
+                    if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['account_number']) && $_POST['account_number'] != "" && isset($_POST['branch_code']) && $_POST['branch_code'] != "") {
                         $m_hash = filter_input(INPUT_POST, "hash");
                         $account_number = filter_input(INPUT_POST, "account_number");
-                        $bank_code = filter_input(INPUT_POST, "bank_code");
-                        if (checkMobileNumber($phone)) {
-                            $validmd5 = validateMd5($partnerId . $partnerPwd . $phone, $partnerId, $m_hash, $connection);
+                        $branch_code = filter_input(INPUT_POST, "branch_code");
+                        $validmd5 = validateMd5($partnerId . $partnerPwd . $branch_code . $account_number, $partnerId, $m_hash, $connection);
+                        if ($validmd5 == 1) {
+                            include_once './ApiFunction/getBankAccountDetails.php';
+                        } else {
+                            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][13]);
+                            echo json_encode(array("statut" => 403, "message" => $langFront["Label"][13]));
+                        }
+                    } else {
+                        managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][4]);
+                        echo json_encode(array("statut" => 403, "message" => $langFront["Label"][4]));
+                    }
+                } else {
+                    managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][3]);
+                    echo json_encode(array("statut" => 402, "message" => $langFront["Label"][3]));
+                }
+            } else {
+                managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][6]);
+                echo json_encode(array("statut" => 402, "message" => $langFront["Label"][6]));
+            }
+        }
+        elseif (strcmp($service, "bankDeposit") == 0) {
+            $serviceId = getServiceId($service, $connection);
+            if ($serviceId != -1) {
+                $privilege = getPartnerPrivilege($partnerId, $serviceId, $connection);
+                if ($privilege) {
+                    if (isset($_POST['hash']) && $_POST['hash'] != "" && isset($_POST['account_number']) && $_POST['account_number'] != "" && isset($_POST['branch_code']) && $_POST['branch_code'] != "" && isset($_POST['amount']) && $_POST['amount'] != "") {
+                        $m_hash = filter_input(INPUT_POST, "hash");
+                        $account_number = filter_input(INPUT_POST, "account_number");
+                        $branch_code = filter_input(INPUT_POST, "branch_code");
+                        $amount = filter_input(INPUT_POST, "amount");
+                        $label = filter_input(INPUT_POST, "label");
+                        $merchantcode = checkBiller('SOPRA', $connection);
+                        if ($merchantcode != -1 && checkAmountBank($amount)) {
+                            $validmd5 = validateMd5($partnerId . $partnerPwd . $branch_code . $account_number . $amount . $label, $partnerId, $m_hash, $connection);
                             if ($validmd5 == 1) {
-                                include_once './ApiFunction/getBankAccountDetails.php';
+                                include_once './ApiFunction/bankDeposit.php';
                             } else {
                                 managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][13]);
                                 echo json_encode(array("statut" => 403, "message" => $langFront["Label"][13]));
                             }
                         } else {
-                            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][20]);
-                            echo json_encode(array("statut" => 408, "message" => $langFront["Label"][20]));
+                            managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][16]);
+                            echo json_encode(array("statut" => 408, "message" => $langFront["Label"][19]));
                         }
+                        
+                        
                     } else {
                         managerLogSimple(__FILE__, __CLASS__, $ip, $partnerId, $service, $langFront["Label"][4]);
                         echo json_encode(array("statut" => 403, "message" => $langFront["Label"][4]));

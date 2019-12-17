@@ -14,7 +14,7 @@ require_once './common/database.php';
 require_once './common/inputValidation.php';
 require_once './common/authentication.php';
 require_once './common/functions.php';
-echo encrypt("0856") ;
+echo encrypt("2017") ;
 if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['pwd']) && $_POST['pwd'] != "" && isset($_GET['service']) && $_GET['service'] != "") {
 
     $partnerId = filter_input(INPUT_POST, "id");
